@@ -9,7 +9,9 @@ They are intended to annotate accessibility-relevant information in application 
 
 ## Requirements and Setup
 
-The plugin sources are located in the ACCAssets subfolder of this repository. They have to be installed in a typical project structure for Figma Plugin development with an IDE like VS Code. Please note that the required Figma node _modules subdirectory to run the plugins is NOT part of this distribution and should be created as part of the code setup according to Figma plugin development documentation.
+The plugin sources are located in the *ACCAssets* subfolder of this repository. They have to be installed in a typical project structure for Figma Plugin development with an IDE like VS Code. 
+
+Please note that the required Figma node _modules subdirectory to run the plugins is NOT part of this distribution and should be created as part of the code setup according to Figma plugin development documentation.
 
 For more details, please contact the respective [Figma plugin development documentation](https://www.figma.com/plugin-docs/). 
 
