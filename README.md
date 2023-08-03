@@ -5,14 +5,14 @@
 The Accessibility Design Tools Figma plugins offer a subset of annotations of the Accessibility Design Tools Figma library for Designers.
 They are intended to annotate accessibility-relevant information in application and control visual and interaction design before handover to development.
 
-[Documentation of the Accessibility Design Tools library](https://experience.sap.com//wp-content/uploads/files/guidelines/Uploads/Accessibility/AccessibilityDesignToolsDocumentation.pdf) is located in experience.sap.com.
+[Documentation of the Accessibility Design Tools Figma library](https://experience.sap.com//wp-content/uploads/files/guidelines/Uploads/Accessibility/AccessibilityDesignToolsDocumentation.pdf) is located in experience.sap.com.
 
 ## Requirements and Setup
 
 The plugin sources have to be installed in a typical project structure for Figma Plugin development with an IDE like VS Code.
 Please note that the required Figma node _modules subdirectory to run the plugins is NOT part of this distribution and should be created as part of the code setup according to Figma plugin development documentation.
 
-For more details, please contact the respective [Figma plugin development documentation](https://www.figma.com/plugin-docs/) 
+For more details, please contact the respective [Figma plugin development documentation](https://www.figma.com/plugin-docs/). 
 
 ## Support, Feedback, Contributing
 
@@ -27,4 +27,4 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Licensing
 
-Copyright (20xx-)20xx SAP SE or an SAP affiliate company and <accessibility-design-tools> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
+Copyright 2023 SAP SE or an SAP affiliate company and <accessibility-design-tools> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
