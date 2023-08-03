@@ -1,0 +1,21 @@
+{
+  "name": "Accessibility Design Tools",
+  "id": "1072563579293318294",
+  "api": "1.0.0",
+  "main": "code.js", 
+  "ui": {
+    "focusorder": "focusorder.html",
+    "readingorder": "readingorder.html",
+    "landmarks": "landmarks.html",
+    "headings": "headings.html"
+  },
+  "menu": [
+    {"name": "Focus Order", "command": "focusorder"},
+    {"name": "Reading Order", "command": "readingorder"},
+    {"name": "Landmarks", "command": "landmarks"},
+    {"name": "Headings", "command": "headings"}
+  ],
+  "editorType": [
+    "figma"
+   ]
+}

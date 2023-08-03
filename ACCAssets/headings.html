@@ -1,0 +1,1076 @@
+<style>
+
+  :root {
+    --asset-color:#9100C3;     
+    --text-color: black;      
+    --text-lightcolor: gray;      
+    --focus-color:#61b0ff;
+    --button-backgroundcolor: white;       
+    --button-primarycolor:#198bfd;
+    --button-primarycolor-hover:#41a0ff;    
+    --button-primarytextcolor:white;
+    --button-backgroundcolor-disabled: gray;     
+    --button-bordercolor: gray;
+    --button-hovercolor:#EEEEEE;
+    --button-lighthovercolor:#F6F6F6;
+    --infoicon-color:#EEEEEE;
+    --info-backgroundcolor:#EEEEEE;
+    --info-bordercolor: gray;     
+    --link-color: blue;
+    --delete-icon-dark: url("data:image/svg+xml,%3Csvg width='188' height='204' viewBox='-104 0 376 208' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M182 32H140V22C140 16.1652 137.682 10.5695 133.556 6.44365C129.431 2.31785 123.835 0 118 0H70C64.1652 0 58.5694 2.31785 54.4436 6.44365C50.3178 10.5695 48 16.1652 48 22V32H6C4.4087 32 2.88258 32.6321 1.75736 33.7574C0.63214 34.8826 0 36.4087 0 38C0 39.5913 0.63214 41.1174 1.75736 42.2426C2.88258 43.3679 4.4087 44 6 44H16V190C16 193.713 17.475 197.274 20.1005 199.899C22.726 202.525 26.287 204 30 204H158C161.713 204 165.274 202.525 167.899 199.899C170.525 197.274 172 193.713 172 190V44H182C183.591 44 185.117 43.3679 186.243 42.2426C187.368 41.1174 188 39.5913 188 38C188 36.4087 187.368 34.8826 186.243 33.7574C185.117 32.6321 183.591 32 182 32ZM60 22C60 19.3478 61.0536 16.8043 62.9289 14.9289C64.8043 13.0536 67.3478 12 70 12H118C120.652 12 123.196 13.0536 125.071 14.9289C126.946 16.8043 128 19.3478 128 22V32H60V22ZM160 190C160 190.53 159.789 191.039 159.414 191.414C159.039 191.789 158.53 192 158 192H30C29.4696 192 28.9609 191.789 28.5858 191.414C28.2107 191.039 28 190.53 28 190V44H160V190ZM76 86V150C76 151.591 75.3679 153.117 74.2426 154.243C73.1174 155.368 71.5913 156 70 156C68.4087 156 66.8826 155.368 65.7574 154.243C64.6321 153.117 64 151.591 64 150V86C64 84.4087 64.6321 82.8826 65.7574 81.7574C66.8826 80.6321 68.4087 80 70 80C71.5913 80 73.1174 80.6321 74.2426 81.7574C75.3679 82.8826 76 84.4087 76 86ZM124 86V150C124 151.591 123.368 153.117 122.243 154.243C121.117 155.368 119.591 156 118 156C116.409 156 114.883 155.368 113.757 154.243C112.632 153.117 112 151.591 112 150V86C112 84.4087 112.632 82.8826 113.757 81.7574C114.883 80.6321 116.409 80 118 80C119.591 80 121.117 80.6321 122.243 81.7574C123.368 82.8826 124 84.4087 124 86Z' fill='black'/%3E%3C/svg%3E");            
+    --delete-icon-light: url("data:image/svg+xml,%3Csvg width='188' height='204' viewBox='-104 0 376 208' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M182 32H140V22C140 16.1652 137.682 10.5695 133.556 6.44365C129.431 2.31785 123.835 0 118 0H70C64.1652 0 58.5694 2.31785 54.4436 6.44365C50.3178 10.5695 48 16.1652 48 22V32H6C4.4087 32 2.88258 32.6321 1.75736 33.7574C0.63214 34.8826 0 36.4087 0 38C0 39.5913 0.63214 41.1174 1.75736 42.2426C2.88258 43.3679 4.4087 44 6 44H16V190C16 193.713 17.475 197.274 20.1005 199.899C22.726 202.525 26.287 204 30 204H158C161.713 204 165.274 202.525 167.899 199.899C170.525 197.274 172 193.713 172 190V44H182C183.591 44 185.117 43.3679 186.243 42.2426C187.368 41.1174 188 39.5913 188 38C188 36.4087 187.368 34.8826 186.243 33.7574C185.117 32.6321 183.591 32 182 32ZM60 22C60 19.3478 61.0536 16.8043 62.9289 14.9289C64.8043 13.0536 67.3478 12 70 12H118C120.652 12 123.196 13.0536 125.071 14.9289C126.946 16.8043 128 19.3478 128 22V32H60V22ZM160 190C160 190.53 159.789 191.039 159.414 191.414C159.039 191.789 158.53 192 158 192H30C29.4696 192 28.9609 191.789 28.5858 191.414C28.2107 191.039 28 190.53 28 190V44H160V190ZM76 86V150C76 151.591 75.3679 153.117 74.2426 154.243C73.1174 155.368 71.5913 156 70 156C68.4087 156 66.8826 155.368 65.7574 154.243C64.6321 153.117 64 151.591 64 150V86C64 84.4087 64.6321 82.8826 65.7574 81.7574C66.8826 80.6321 68.4087 80 70 80C71.5913 80 73.1174 80.6321 74.2426 81.7574C75.3679 82.8826 76 84.4087 76 86ZM124 86V150C124 151.591 123.368 153.117 122.243 154.243C121.117 155.368 119.591 156 118 156C116.409 156 114.883 155.368 113.757 154.243C112.632 153.117 112 151.591 112 150V86C112 84.4087 112.632 82.8826 113.757 81.7574C114.883 80.6321 116.409 80 118 80C119.591 80 121.117 80.6321 122.243 81.7574C123.368 82.8826 124 84.4087 124 86Z' fill='white'/%3E%3C/svg%3E");            
+  }
+
+  :focus {
+      outline: 2px solid var(--focus-color);
+      outline-offset: 2px;
+  }
+
+  html, body {
+    font-family: "Inter"; 
+    font-size: 10pt;  
+    color: var(--text-color);
+    margin:0;
+    padding:0;
+    min-width: 20em;
+    min-height: 20em;
+    user-select: none; /* Standard syntax */
+  }
+
+    .cpright {    
+    font-size: 12pt;
+    margin-left: 4px; 
+    vertical-align: top;
+  }
+
+  .layouttable {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      border: 0px;
+  }
+
+  .bannertable {
+    margin:0;
+    padding:0;
+    padding-bottom: 2px; 
+    border-bottom: 1px solid var(--button-bordercolor);
+  }
+
+/*Links*/
+
+  a {
+    color: var(--link-color);
+  }
+  
+
+/* Buttons */
+      
+  .button {
+    color: var(--text-color);
+    background-color: var(--button-backgroundcolor);
+    border-radius: 6px;  
+    border: 1px solid var(--button-bordercolor);
+    padding: 0.5em;
+    margin:0.2em;
+    width: 4em;
+    cursor: pointer;
+  }    
+
+  .button:hover {
+    background-color: var(--button-hovercolor);
+  }
+
+  .button[disabled] { 
+    border: 1px solid var(--button-bordercolor);
+    color: var(--button-backgroundcolor);
+    background-color: var(--button-backgroundcolor-disabled);    
+  }     
+  
+  .buttonPrimary {
+    float:right;
+    color:var(--button-primarytextcolor);
+    border: 1px solid var(--button-primarycolor);
+    background-color: var(--button-primarycolor);
+  }
+
+  .buttonPrimary:hover {           
+    border: 1px solid var(--button-primarycolor-hover);    
+    background-color: var(--button-primarycolor-hover); 
+  }     
+
+  .buttonPrimary[disabled] {   
+    border: 1px solid var(--button-bordercolor);
+    background-color: var(--button-backgroundcolor-disabled);    
+  }
+
+  .buttonconfigminus {
+    display: inline-block;    
+    vertical-align: middle; 
+    border: 0;
+    border-radius: 32px;  
+    position: relative;
+    padding: 0.5em;
+    margin:0.1em;
+    width: 1.5em;
+    height:  1.5em;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM10 0C8.68678 0 7.38642 0.258658 6.17317 0.761205C4.95991 1.26375 3.85752 2.00035 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C3.85752 17.9997 4.95991 18.7362 6.17317 19.2388C7.38642 19.7413 8.68678 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM5 11H15V9H5' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .buttonconfigplus {
+    display: inline-block;    
+    vertical-align: middle; 
+    border: 0;
+    border-radius: 32px;  
+    position: relative;
+    padding: 0.5em;
+    margin:0.1em;
+    width:  1.5em;
+    height:  1.5em;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM10 0C8.68678 0 7.38642 0.258658 6.17317 0.761205C4.95991 1.26375 3.85752 2.00035 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C3.85752 17.9997 4.95991 18.7362 6.17317 19.2388C7.38642 19.7413 8.68678 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM11 5H9V9H5V11H9V15H11V11H15V9H11V5Z' fill='black'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+  .selecticb {
+    transform: scale(1.3);
+    vertical-align: middle;
+    margin: 0.8em;
+    accent-color: var(--asset-color);
+    cursor: pointer;    
+  }
+  
+/* Checkbox pseudo element for theme switching */
+
+  .themecheckcon {
+    display: inline-block;
+    vertical-align: middle; 
+    border-radius: 32px;  
+    width: 1.6em;
+    height: 1.6em;
+    margin-left:0.1em;
+    margin-right:0.1em;
+  }
+ 
+  .themecheckcon:focus-within {
+    outline: 2px solid var(--focus-color);
+    outline-offset: -1px;
+  }
+
+  .themecheck {
+    appearance:none;    
+    outline: 0;
+    flex-grow: 0;
+    background-color: transparent;  
+  }
+
+  .themecheck:before {
+    content: "";
+    color: transparent;    
+    background-color: transparent;
+    display: inline-block;    
+    border: 0;    
+    width: 1.7em;
+    height: 1.7em;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 1.5 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3.5C11.7239 3.5 13.3772 4.18482 14.5962 5.40381C15.8152 6.62279 16.5 8.27609 16.5 10C16.5 11.7239 15.8152 13.3772 14.5962 14.5962C13.3772 15.8152 11.7239 16.5 10 16.5V3.5ZM10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat no-repeat;
+    background-position: left top;
+  }
+
+  .themecheck:hover::before {             
+    cursor: pointer;  
+  }  
+
+  .themecheck:checked {
+    background-color: transparent;
+  }
+
+  .themecheck:focus-visible {
+    outline: 0;    
+  }
+
+  .themecheck:checked::before {  
+	  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='2 1.5 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3.5C11.7239 3.5 13.3772 4.18482 14.5962 5.40381C15.8152 6.62279 16.5 8.27609 16.5 10C16.5 11.7239 15.8152 13.3772 14.5962 14.5962C13.3772 15.8152 11.7239 16.5 10 16.5V3.5ZM10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2Z' fill='white'/%3E%3C/svg%3E%0A");
+  }
+
+  /* Select Dropdown */
+
+  select {        
+    padding: 2px;  
+    width: 4em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 16px;
+    border: 1px solid var(--text-lightcolor);
+  }
+
+  /* Invisible Input */
+
+  input[type=text] {
+    color: var(--asset-color);
+    font-style: italic;
+    border-radius: 3px;
+    border:0;
+  }
+
+/* Copyright */
+
+  .copyright {
+    text-align:left;
+    font-size: 9pt;  
+    color: var(--text-lightcolor);
+    padding-left:0.3em;
+  }
+
+ /* Help */
+   
+  details {
+    display: inline-block;          
+    position: relative;
+    vertical-align: middle; 
+  }
+    
+  details p {
+    cursor: auto;
+    color: var(--text-color);
+    background: var(--info-backgroundcolor);
+    padding: 15px;
+    width: 350px;
+    position: absolute;
+    z-index: 2;
+    left: -350px;
+    top: 0 px;
+    border-radius: 4px;
+    border: 1px solid  var(--info-bordercolor);
+    font-size: 10pt;
+    text-align: left;
+  }
+
+  summary {                 
+    display: inline-block;
+    vertical-align: middle; 
+    border-radius: 32px;  
+    width: 1.3em;
+    height: 1.3em;
+    margin-left: 0em;
+    margin-right: 1em;  
+    background-color: var(--button-backgroundcolor);
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_137_6083)'%3E%3Cpath d='M9 13.25C9.24083 13.25 9.44285 13.1684 9.60605 13.0052C9.76868 12.8426 9.85 12.6408 9.85 12.4V8.97875C9.85 8.73792 9.76868 8.53958 9.60605 8.38375C9.44285 8.22792 9.24083 8.15 9 8.15C8.75917 8.15 8.55743 8.23132 8.3948 8.39395C8.2316 8.55715 8.15 8.75917 8.15 9V12.4213C8.15 12.6621 8.2316 12.8604 8.3948 13.0163C8.55743 13.1721 8.75917 13.25 9 13.25ZM9 6.45C9.24083 6.45 9.44285 6.3684 9.60605 6.2052C9.76868 6.04257 9.85 5.84083 9.85 5.6C9.85 5.35917 9.76868 5.15715 9.60605 4.99395C9.44285 4.83132 9.24083 4.75 9 4.75C8.75917 4.75 8.55743 4.83132 8.3948 4.99395C8.2316 5.15715 8.15 5.35917 8.15 5.6C8.15 5.84083 8.2316 6.04257 8.3948 6.2052C8.55743 6.3684 8.75917 6.45 9 6.45ZM9 17.5C7.82417 17.5 6.71917 17.2767 5.685 16.8302C4.65083 16.3842 3.75125 15.7788 2.98625 15.0138C2.22125 14.2488 1.61577 13.3492 1.1698 12.315C0.723267 11.2808 0.5 10.1758 0.5 9C0.5 7.82417 0.723267 6.71917 1.1698 5.685C1.61577 4.65083 2.22125 3.75125 2.98625 2.98625C3.75125 2.22125 4.65083 1.61548 5.685 1.16895C6.71917 0.722983 7.82417 0.5 9 0.5C10.1758 0.5 11.2808 0.722983 12.315 1.16895C13.3492 1.61548 14.2488 2.22125 15.0138 2.98625C15.7788 3.75125 16.3842 4.65083 16.8302 5.685C17.2767 6.71917 17.5 7.82417 17.5 9C17.5 10.1758 17.2767 11.2808 16.8302 12.315C16.3842 13.3492 15.7788 14.2488 15.0138 15.0138C14.2488 15.7788 13.3492 16.3842 12.315 16.8302C11.2808 17.2767 10.1758 17.5 9 17.5ZM9 15.8C10.8842 15.8 12.4887 15.1379 13.8135 13.8135C15.1379 12.4887 15.8 10.8842 15.8 9C15.8 7.11583 15.1379 5.51132 13.8135 4.18645C12.4887 2.86215 10.8842 2.2 9 2.2C7.11583 2.2 5.5116 2.86215 4.1873 4.18645C2.86243 5.51132 2.2 7.11583 2.2 9C2.2 10.8842 2.86243 12.4887 4.1873 13.8135C5.5116 15.1379 7.11583 15.8 9 15.8Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_137_6083'%3E%3Crect width='17' height='17' fill='white' transform='translate(0.5 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;    
+  }
+
+  summary:hover {                 
+    background-color: var(--button-hovercolor);
+    cursor: pointer;  
+  }
+
+  details p:before {
+    content: "";
+    border-bottom: 12px solid var(--info-backgroundcolor);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    height: 0;
+    left: 352px;
+    position: absolute;
+    top: -10px;
+    width: 0;
+  }
+
+  details[open] p {
+    animation: animateDown 0.2s linear forwards;
+  }
+
+  @keyframes animateDown {
+    0% {
+      opacity: 0;
+      transform: translatey(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translatey(0);
+    }
+  }
+
+/* Node List */
+
+  [draggable] {
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        /* Required to make elements draggable in old WebKit */
+        -khtml-user-drag: element;
+        -webkit-user-drag: element;
+  }
+
+  #nodelist {
+  height: 100%;
+  border: 1px solid var(--text-lightcolor);
+  overflow: auto;
+  scrollbar-gutter: stable;
+  }
+
+  #columns {        
+  margin: 6px;         
+  padding: 0px;
+  list-style-type: none;        
+  }
+
+  #nodelist::-webkit-scrollbar {
+  width: 12px;
+  }
+
+  #nodelist::-webkit-scrollbar-track {
+  background-color: var(--button-hovercolor);
+  border-radius: 30px;
+  }
+
+  #nodelist::-webkit-scrollbar-thumb {  
+  background-color: var(--asset-color);
+  border-radius: 30px;
+  }
+
+  .column {
+  padding-bottom: 0px;
+  padding-top: 0px;                  
+  margin: 0px;    
+  margin-top: 0px;    
+  margin-bottom: 0px;    
+  text-align: left;        
+  vertical-align: middle;
+  cursor: move;
+  white-space: nowrap;               
+  border-radius: 4px;  
+  }
+
+  .column:hover {
+  background-color: var(--button-lighthovercolor);
+  }
+
+  .column .deleteBtnDark, .column .deleteBtnLight  {
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .column:hover .deleteBtnDark { 
+    background-image: var(--delete-icon-dark);
+    cursor: pointer;
+  }
+
+  .column:focus .deleteBtnDark { 
+    background-image: var(--delete-icon-dark);
+  }
+
+  .column:hover .deleteBtnLight { 
+    background-image: var(--delete-icon-light);
+    cursor: pointer;
+  }
+
+  .column:focus .deleteBtnLight { 
+    background-image: var(--delete-icon-light);
+  }
+
+  .column span {
+  padding: 4px;
+  font-size: 10pt; 
+  background-color: var(--button-lighthovercolor);
+  border-left: 3px solid var(--asset-color);
+  border-radius: 6px;
+  cursor: pointer; 
+ }
+
+  .column.dragElem {
+  opacity: 1;
+  }
+
+  .column.over {
+  border-top: 2px solid var(--asset-color);
+  margin-top:-2px;
+  }
+
+/* Resizer */
+
+  #corner {
+    position: absolute;
+    right: 1px;
+    bottom: 0px;
+    cursor: nwse-resize;
+  }
+
+  /* Busy */
+
+  .busy {
+    width: 16;
+    height: 16;
+    border: 3px solid;
+    border-color: white transparent;
+    border-radius: 50%;
+    display: none;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+  } 
+
+</style>
+
+<!-- HTML Layout Code -->
+
+<table role="presentation" border="0" class="layouttable">
+  <tr style="height: 4em;">
+    <td>
+      <table role="presentation" border="0" width="100%" class="bannertable">
+        <tr>
+        <td style="text-align:center; padding:0.3em; width: 3em; ">
+          <svg aria-description="Annotation symbol" width="66" height="45" viewBox="0 0 66 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_10945_18987)">
+            <g clip-path="url(#clip0_10945_18987)">
+            <rect x="4.5" y="0.5" width="37" height="36" rx="2.5" fill="#9100C3"/>
+            <path d="M13.4766 12.6162H15.1465V17.7666H21.3252V12.6162H22.9951V25H21.3252V19.3486H15.1465V25H13.4766V12.6162ZM28.0488 20.1221L24.8408 15.499H26.625L28.9629 19.1465L31.2832 15.499H33.085L29.877 20.1045L33.2783 25H31.4854L28.9629 21.1328L26.4404 25H24.6826L28.0488 20.1221Z" fill="white"/>
+            <rect x="4.5" y="0.5" width="37" height="36" rx="2.5" stroke="white"/>
+            <path d="M46.5 7.5L46.5 29.5L61.1667 18.5L46.5 7.5Z" fill="#9100C3" stroke="white"/>
+            </g>
+            </g>
+            <defs>
+            <filter id="filter0_d_10945_18987" x="0" y="0" width="66" height="45" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_10945_18987"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_10945_18987" result="shape"/>
+            </filter>
+            <clipPath id="clip0_10945_18987">
+            <rect width="58" height="37" fill="white" transform="translate(4)"/>
+            </clipPath>
+            </defs>
+            </svg>
+
+        </td>
+        <td style="text-align:left; padding:0.2em; white-space: nowrap;">
+          <h2 id="heading" style="display:table-cell; vertical-align:middle">Headings<span class="cpright">&copy;</span></h2>
+        </td>  
+        <td style=" padding:0.2em; text-align: right; white-space: nowrap;">     
+          <button id="zoomsmaller" class="button buttonconfigminus" title="Make text 10% smaller"></button>
+          <button id="zoomlarger" class="button buttonconfigplus" title="Make text 10% larger"></button>      
+          <span id="themeCheckC" class="themecheckcon">
+            <input id="themeswitcher" type="checkbox" class="themecheck" title="Switch Light/Dark Theme">
+          </span>             
+          <details class="tooltip" title="How to create and modify landmarks">
+            <summary></summary>
+            <p id="detailstext">     
+              <b>Headings</b> - Version 2.0 <br>      
+              <br>
+              To create heading groups: <br>
+              - Select a single layer on page <br>
+              - Use "<b>Add</b>" or [Ctrl+A] to add layer to list items <br>
+              - Click or press [Return] on items to find them on page <br>                
+              - Drag items or press [Ctrl+Arrow] to change sequence <br>                
+              - Press [Del] key or use Delete icon to remove items <br>                     
+              - Use "<b>Save</b>" or [Ctrl+S] to create group and close<br>
+              - Press [Ctrl+F4] to close without saving <br><br>
+
+              To change variant properties:<br>
+              - Use "Variant" for heading levels <br>
+              - Invisible headings: check "Invisible" <br>
+              - Add invisible heading text to respective field <br><br>
+              
+              To modify created groups:<br>
+              - Select group in layers and start plugin.<br><br>
+
+              You can also: <br>
+              - Decrease/increase font size (-/+) in 10% steps<br>
+              - Toggle light/dark theme (&#9680;) <br>
+              <br>
+              <span style="font-size:9pt">&copy; 2023 SAP SE or an SAP affiliate company. All rights reserved.</span> <br>
+              <span style="font-size:9pt"><a href="https://www.sap.com/about/legal/copyright.html" target="_blank">https://www.sap.com/about/legal/copyright.html</a> </span><br>
+            </p>
+          </details>  
+
+        </td>
+      </tr>       
+      </table>
+
+    </td>
+  </tr>
+
+  <tr style="height: 2em;vertical-align: top">
+    <td style="vertical-align: middle; padding-left:8px; padding-right:8px">
+      <table id="legend" border=0 style="font-size:10pt; width:100%;">
+        <tr>
+          <td style="width:30px; text-align:center;">Nr.</td>
+          <td style="width:calc(100%-30px-60px-60px-100px-30px-12px);min-width:100px">Layer</td>
+          <td style="width:60; text-align:left;">Level</td>
+          <td style="width:60px; text-align:center;">Invisible</td>
+          <td style="width:100px;">Text</td>
+          <td style="width:42px; text-align:center;"></td>     
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr style="height: calc(100% - 8em)">
+    <td>
+      <div id="nodelist">
+        <ol id="columns" aria-label="Selected layers"></ol>
+    </div>
+    </td>
+  </tr>
+  <tr style="height: 2em;">
+    <td style="padding-right:0.5em">
+      <div style="width:100%;">
+        <button id="addOrder" class="button" title="Add page layer">Add</button>        
+        <button id="createOrder" class="button buttonPrimary" title="Save and close (Ctrl+S)"><span id="busy" class="busy"></span><span id="save">Save</span></button> 
+      </div>
+    
+      <svg id="corner" aria-description="Window resizer" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns=http://www.w3.org/2000/svg>
+        <path d="M16 0V16H0L16 0Z" fill="white"/>
+        <path d="M6.22577 16H3L16 3V6.22576L6.22577 16Z" fill="#8C8C8C"/>
+        <path d="M11.8602 16H8.63441L16 8.63441V11.8602L11.8602 16Z" fill="#8C8C8C"/>
+      </svg>
+    </td>
+  </tr>
+</table>
+
+<script>
+
+// -----------------------------------------------------------------------------------------------------------
+          
+    var keycodes = {
+      ARROW_LEFT: 37,
+      ARROW_UP: 38,
+      ARROW_RIGHT: 39,
+      ARROW_DOWN: 40,    
+      SPACE: 32,
+      END: 35,
+      HOME: 36,
+      DELETE: 46      
+    };
+
+    // defaults
+    var zoomLevel = 1; 
+    var themeID = 0;
+
+    document.body.onload = () => { // some init stuff     
+
+    // Pull for theme settings      
+    parent.postMessage( { pluginMessage: { type: 'gettheme' } }, '*');   
+
+    // Set initial focus
+    document.getElementById('addOrder').focus();
+
+    // Add global event listeners
+    document.body.addEventListener('keyup', handleKeyUp, false);	// no KeyDown handler so far
+
+    }
+
+    onmessage = (event) => {      
+
+    var pm = event.data.pluginMessage; // contains an object with diff. proerties for evaluation      
+
+    if(zoomLevel != pm.zoomfactor) {    
+      zoomLevel = pm.zoomfactor;
+      document.body.style.zoom = zoomLevel;
+      parent.postMessage( { pluginMessage: { type: 'zoom', zoom: zoomLevel }}, '*');        
+    }
+
+    if (pm.nodearray.length > 1) 
+      addFigmaNodes(pm.nodearray);  
+
+    var cb = document.getElementById('themeswitcher');
+    cb.checked = !!pm.themeindex;
+    themeID = pm.themeindex;
+    switchThemes(cb.checked);           
+
+    }
+
+    function addFigmaNodes(info) {
+
+      // We can only add nodes that have not been added previously, so check that
+      var el = document.getElementById('columns');
+      for (let i = 0; i < el.children.length; i++) {   
+        if (el.children[i].getAttribute('id') == info[1]) return; // end function
+      }
+
+      var listitem = document.createElement("li");          
+      listitem.className = "column";
+      listitem.draggable = true;
+      listitem.tabIndex = 0; // when key nav is enabled, uncomment this
+      listitem.id = info[1]; 
+
+      var c, r, t;
+      t = document.createElement('table');
+      t.style="width:100%;"; 
+      t.role = "presentation";
+      t.border = 0;
+      r = t.insertRow(0);         
+        
+      c = r.insertCell(0);     
+      c.style="width:30px;text-align:center;";     
+      
+      c = r.insertCell(1);          
+      c.style="width:calc(100%30px-60px-60px-100px-30px); max-width: 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;";
+      var node = document.createElement("span");
+      node.innerHTML = info[0];
+      node.title = info[0];
+      node.setAttribute("parentID", info[1]);       
+      c.appendChild(node);   
+      
+      c = r.insertCell(2); 
+      c.style="width:60px;";  
+      var select = document.createElement("select");    
+      select.className = "select";        
+      select.title = "Heading Level";              
+      //Create array of options to be added
+      var array = ["H1","H2","H3","H4","H5","H6"]; // 1,2,3,4 ...
+      //Create and append the options
+      for (var i = 0; i < array.length; i++) {
+          var option = document.createElement("option");
+          option.value = array[i];
+          option.text = array[i];          
+          select.appendChild(option);
+      }          
+
+      if (info[2] == "") // initial value
+        select.selectedIndex = 0;
+      else  
+        select.value = info[2];          
+
+      c.appendChild(select);
+
+      c = r.insertCell(3);            
+      c.style="width:60px;text-align:center;";
+      var cbi = document.createElement("input");      
+      cbi.type = "checkbox";  
+      cbi.className = "selecticb";   
+      cbi.title = "Invisible heading";      
+      cbi.checked = (info[3] == "true") ? true : false;
+      c.appendChild(cbi); 
+
+      c = r.insertCell(4);   
+      c.style="width:100px";
+      var ip = document.createElement("input");      
+      ip.type = "text";
+      ip.class = "ivinput";
+      ip.style = "width:100%";
+      ip.style.display = (info[3] == "true") ? "inline" : "none";            
+      ip.value = info[4];
+      c.appendChild(ip);
+
+      c = r.insertCell(5);     
+      c.style="width:30px;text-align:center;";
+      c.title = "Delete item";
+      c.className = "deleteBtnDark";
+      c.setAttribute("parentID", info[1]);
+
+      listitem.appendChild(t);        
+      document.getElementById('columns').appendChild(listitem);
+
+      renumberListItems();
+      
+      addEventListeners(listitem);
+
+    }
+
+    // Figma Node List Management --------------------------------------------------------------------------------------------------------
+
+    // Add Nodes: Need to do this in a callback since we need node ID from figma for later identification
+    document.getElementById('addOrder').onclick = () => {        
+      addingFigmaNodes();
+    }
+
+    // Create Figma Nodes based on internal node sequence
+    document.getElementById('createOrder').onclick = () => {      
+      const s = document.getElementById('save');
+      const b = document.getElementById('busy');    
+      s.style.display = "none";
+      b.style.display = "inline-block";          
+      window.setTimeout(creatingFigmaNodes, 50);
+    }
+
+    function addingFigmaNodes() {    
+      parent.postMessage({ pluginMessage: { type: 'addHeadingOrder' } }, '*')       
+    }
+
+    function creatingFigmaNodes() {     
+      let itemsarr = []; 
+      let variantarr = [];
+      let bitemsarr = [];  
+      let paramsarr = [];
+      var l = document.getElementById('columns');
+      var litems, sel, cb, ip;
+
+      const s = document.getElementById('save');
+      const b = document.getElementById('busy');    
+
+      s.style.display = "none";
+      b.style.display = "inline-block";
+
+      for (let i = 0; i < l.children.length; i++) {  
+        litem = l.children[i];
+        itemsarr[i] = litem.id; 
+        variantarr[i] = "";
+        bitemsarr[i] = "";  
+        paramsarr[i] = "";           
+        sel = litem.querySelector('select');
+        //sel = litem.children[0].children[0].children[0].children[2].firstChild; // inner select      
+        if (sel!=null) variantarr[i] = sel.value;                   
+        cb = litem.querySelector("input[class='selecticb']"); 
+        //cb = litem.children[0].children[0].children[0].children[3].firstChild; // inner checkbox             
+        if (cb!=null && cb.checked == true) {
+          bitemsarr[i] = litem.id;        
+          ip = litem.querySelector("input[type='text']"); 
+          //ip = litem.children[0].children[0].children[0].children[4].firstChild; // inner input
+          if (ip!=null) paramsarr[i] = ip.value;            
+        }
+      }   
+      parent.postMessage({pluginMessage: { type: 'createHeadingOrder', items: itemsarr, varitems: variantarr, bitems: bitemsarr, paritems: paramsarr } }, '*')
+    }
+
+    function quit() {    
+      parent.postMessage( { pluginMessage: { type: 'quit' } }, '*');
+    }
+    
+  // Global Event handlers --------------------------------------------------
+
+    
+  function handleKeyUp(e) {
+
+    // Trigger Save
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      const s = document.getElementById('save');
+      const b = document.getElementById('busy');    
+      s.style.display = "none";
+      b.style.display = "inline-block";         
+      creatingFigmaNodes();
+    }
+
+        // Trigger Quit 
+    if ((e.ctrlKey || e.metaKey) && e.key === 'F4') {
+      quit();
+    }
+
+  }
+
+  // Local Event Handlers --------------------------------------------------
+
+  // Internal Node List Management --------------------------------------------------------------------------------------  
+
+  var dragSrcEl = null;
+
+  function handleDragStartItem(e) {
+    // Target (this) element is the source node.
+    dragSrcEl = this;
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('outerhtml', dragSrcEl.outerHTML);
+    e.dataTransfer.setData('variantindex', dragSrcEl.firstChild.rows[0].cells[2].firstChild.selectedIndex);
+    e.dataTransfer.setData('isInvisible', dragSrcEl.firstChild.rows[0].cells[3].firstChild.checked);    
+    e.dataTransfer.setData('invisibleText', dragSrcEl.firstChild.rows[0].cells[4].firstChild.value);
+    dragSrcEl.classList.add('dragElem');
+  }
+
+  function handleDragOverItem(e) {
+    if (e.preventDefault) {
+      e.preventDefault(); // Necessary. Allows us to drop.
+    }
+    this.classList.add('over');
+    e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+    return false;
+  }
+  function handleDragEnterItem(e) {
+    // e.target is the current hover target.
+  }
+
+  function handleDragLeaveItem(e) {
+    this.classList.remove('over');  // e.target is previous target element.
+  }
+
+  function handleDropItem(e) {
+    if (e.stopPropagation) {
+      e.stopPropagation(); // Stops some browsers from redirecting.
+    }
+    // Don't do anything if dropping the same column we're dragging.
+    if (dragSrcEl != this) {
+
+      this.parentNode.removeChild(dragSrcEl);
+      var dropHTML = e.dataTransfer.getData('outerhtml');
+      this.insertAdjacentHTML('beforebegin',dropHTML);
+      
+      var dropElem = this.previousSibling;
+
+      addEventListeners(dropElem);  	
+  
+      renumberListItems();
+
+      // restore states after drop            
+      dropElem.firstChild.rows[0].cells[2].firstChild.selectedIndex = parseInt(e.dataTransfer.getData('variantindex'));
+      dropElem.firstChild.rows[0].cells[3].firstChild.checked = e.dataTransfer.getData('isInvisible') == "true" ? true:false;        
+      dropElem.firstChild.rows[0].cells[4].firstChild.value = e.dataTransfer.getData('invisibleText');      
+      dropElem.focus(); 
+
+    }
+    this.classList.remove('over');
+    return false;
+  }
+
+  function handleDragEndItem(e) {
+    this.classList.remove('over');
+  }
+
+  function handleInvisibleClickItem(e) {       
+    e.target.parentElement.nextSibling.firstChild.style.display = (e.target.checked == true) ? "inline" : "none";       
+  }
+
+  function handleClickItem(e) { // hilite the respective scene node in Figma  
+    parent.postMessage({ pluginMessage: { type: 'highlightSceneNode', id: e.target.getAttribute("parentID")} }, '*');          
+  }
+
+  function handleDeleteItem(e) { // delete the selected layer list enty
+    parent.postMessage({ pluginMessage: { type: 'deleteHeadingItem', id: e.target.getAttribute("parentID")} }, '*');      
+    document.getElementById(e.target.getAttribute("parentID")).remove();    
+    renumberListItems();    
+  }
+  
+  function handleKeyDownItem(e) {
+    if (e.target.nodeName === "LI") {
+      if (e.ctrlKey || e.metaKey) { // drag and drop alternative
+        switch ((e.key).toUpperCase()) {
+          case "ARROWDOWN": // Move Down
+            //console.log("handleKeyUpItem - ARROWDOWN")
+            if (e.target.nextSibling)          
+              this.parentNode.insertBefore(e.target, e.target.nextSibling.nextSibling).focus();              
+          break;  
+          case "ARROWUP": // Move Up
+          if (e.target.previousSibling)          
+              this.parentNode.insertBefore(e.target, e.target.previousSibling).focus();              
+          break;                 
+          default:
+          break;     
+        }
+        renumberListItems();   
+      }
+      else {  // no modifiers    
+        switch ((e.key).toUpperCase()) {      
+          case "ARROWDOWN": // Nav Down
+            if (e.target.nextSibling)
+                e.target.nextSibling.focus();
+            break;  
+          case "ARROWUP": // Nav Up
+            if (e.target.previousSibling)
+              e.target.previousSibling.focus();
+          break;  
+          case "END": // Nav Last
+          if (e.target.parentElement.lastElementChild)
+            e.target.parentElement.lastElementChild.focus();
+          break;  
+          case "HOME": // Nav First
+          if (e.target.parentElement.firstElementChild)
+            e.target.parentElement.firstElementChild.focus();        
+          break;  
+        }      
+      }
+    }    
+  }
+
+  function handleKeyUpItem(e) {
+    if (e.target.nodeName === "LI") {
+      switch ((e.key).toUpperCase()) {        
+        case "DELETE": // Item Remove
+          parent.postMessage({ pluginMessage: { type: 'deleteFocusItem', id: e.target.id} }, '*');             
+          if (e.target.nextSibling) 
+            e.target.nextSibling.focus();    
+          else {
+            if (e.target.previousSibling)
+              e.target.previousSibling.focus();                       
+          }
+          e.target.remove();   
+          renumberListItems();           
+        break;  
+        case "ENTER": // Layer Select for Item
+          parent.postMessage({ pluginMessage: { type: 'highlightSceneNode', id: e.target.id} }, '*');         
+        break;          
+      }                      
+    }          
+  }
+
+  function addEventListeners(el) {
+    el.addEventListener('dragstart', handleDragStartItem, false);
+    el.addEventListener('dragenter', handleDragEnterItem, false);
+    el.addEventListener('dragover', handleDragOverItem, false);
+    el.addEventListener('dragleave', handleDragLeaveItem, false);
+    el.addEventListener('drop', handleDropItem, false);
+    el.addEventListener('dragend', handleDragEndItem, false);
+                      
+    el.addEventListener('keyup', handleKeyUpItem, false);	  
+    el.addEventListener('keydown', handleKeyDownItem, false);	  
+
+    el.firstChild.rows[0].cells[1].firstChild.addEventListener('click', handleClickItem, false);	                
+    el.firstChild.rows[0].cells[3].firstChild.addEventListener('click', handleInvisibleClickItem, false);	   
+    el.firstChild.rows[0].cells[5].addEventListener('click', handleDeleteItem, false);	                    
+  }
+
+  var cols = document.querySelectorAll('#columns .column');
+  [].forEach.call(cols, addEventListeners);
+
+
+  // Resize Dialog Window ---------------------------------------------------------------
+  
+  const corner = document.getElementById('corner');
+  function resizeWindow(e) {
+    const size = {
+      w: Math.max(50,Math.floor(e.clientX+5)),
+      h: Math.max(50,Math.floor(e.clientY+5))
+
+    };    
+    if (size.w >= Math.round(500*zoomLevel) && size.h >= 300 )
+      parent.postMessage( { pluginMessage: { type: 'resize', size: size }}, '*');
+  }
+  corner.onpointerdown = (e)=>{
+    corner.onpointermove = resizeWindow;
+    corner.setPointerCapture(e.pointerId);
+  };
+  corner.onpointerup = (e)=>{
+    corner.onpointermove = null;
+    corner.releasePointerCapture(e.pointerId);
+  };
+
+  // Settings  --------------------------------------------------------------------------------------------------------
+
+  document.getElementById('zoomlarger').onclick = () => { 
+    zoomLarger();
+  }
+
+  function zoomLarger(){
+    if (zoomLevel < 2) {  
+      zoomLevel = zoomLevel + 0.1;        
+      document.body.style.zoom = zoomLevel;      
+      parent.postMessage( { pluginMessage: { type: 'zoom', zoom: zoomLevel }}, '*');
+    }  
+  }
+
+  document.getElementById('zoomsmaller').onclick = () => { 
+    zoomSmaller();
+  }
+
+  function zoomSmaller(){
+    if (zoomLevel > 1) {  
+      zoomLevel = zoomLevel - 0.1;        
+      document.body.style.zoom = zoomLevel;
+      parent.postMessage( { pluginMessage: { type: 'zoom', zoom: zoomLevel }}, '*');
+    }    
+  }
+
+  document.getElementById('themeswitcher').onclick = () => { 
+    var cb = document.getElementById('themeswitcher');
+    switchThemes(cb.checked);
+    themeID = cb.checked ? 1 : 0;
+    parent.postMessage( { pluginMessage: { type: 'theme', theme: themeID }}, '*');       
+  }
+
+  // Helpers --------------------------------------------------------------------------------------------------------
+
+  function renumberListItems() {
+    var o = document.getElementById('columns').getElementsByTagName('li');        
+      var i=1;
+      for (const element of o) {
+        var cell = element.firstChild.rows[0].cells[0];
+        cell.innerHTML = i + ".";          
+        i++;
+      }
+  }
+
+  function switchThemes(tb) {
+
+    const dark = "#2C2C2C";
+    const black = "#000000";
+    const white = "#FFFFFF";
+    const gray = "#EEEEEE";
+
+    const darkhover = "#3D3D3D";
+    const lighthover = "#F6F6F6";
+    const darklink = "#B9DCFF";
+    const lightlink = "#0000FF";
+
+    if (tb == true) {
+      document.body.style.backgroundColor = dark;    
+      document.body.style.color = white;   
+      document.getElementById('heading').style.color = white;       
+      document.getElementById('legend').style.color = white;           
+      document.getElementById('detailstext').style.color = white;       
+      document.getElementById('detailstext').style.backgroundColor = darkhover;             
+      document.getElementById('detailstext').style.setProperty('--info-backgroundcolor', darkhover); // bypass             
+      for (const element of document.getElementById('columns').getElementsByTagName('li')) {        
+        element.firstChild.rows[0].cells[0].style.color = white;  
+        element.firstChild.rows[0].cells[1].style.color = white;  
+        element.firstChild.rows[0].cells[2].firstChild.style.color = white;  
+        element.firstChild.rows[0].cells[2].firstChild.style.backgroundColor = darkhover;  
+        element.firstChild.rows[0].cells[5].className = "deleteBtnLight";
+        element.style.setProperty('--button-lighthovercolor', darkhover); // bypass     
+      }                 
+      for (const element of document.getElementsByTagName('a')) { 
+        element.style.setProperty('--link-color', darklink); // bypass     
+      }
+    }
+    else {
+      document.body.style.backgroundColor = white;    
+      document.body.style.color = black;    
+      document.getElementById('heading').style.color = black;   
+      document.getElementById('legend').style.color = black;       
+      document.getElementById('detailstext').style.color = black;       
+      document.getElementById('detailstext').style.backgroundColor = gray;   
+      document.getElementById('detailstext').style.setProperty('--info-backgroundcolor', gray); // bypass           
+      for (const element of document.getElementById('columns').getElementsByTagName('li')) {
+        element.firstChild.rows[0].cells[0].style.color = black;          
+        element.firstChild.rows[0].cells[1].style.color = black;       
+        element.firstChild.rows[0].cells[2].firstChild.style.color = black;  
+        element.firstChild.rows[0].cells[2].firstChild.style.backgroundColor = white;       
+        element.firstChild.rows[0].cells[5].className = "deleteBtnDark";
+        element.style.setProperty('--button-lighthovercolor', lighthover); // bypass                
+      }                  
+      for (const element of document.getElementsByTagName('a')) { 
+        element.style.setProperty('--link-color', lightlink); // bypass     
+      }                    
+    }  
+  }                           
+
+  const tooltip = document.querySelector(".tooltip");
+    document.addEventListener("click", function (e) {
+      var insideTooltip = tooltip.contains(e.target);
+      if (!insideTooltip) {
+        tooltip.removeAttribute("open");
+      }
+    });
+
+  const callback = function(mutationsList, observer) {
+      for(const mutation of mutationsList) {
+          /* if (mutation.type === 'childList') 
+          if (mutation.type === 'attributes') ... */
+      }
+  };
+
+  const observer = new MutationObserver(callback);
+  const config1 = { childList: true, subtree: true };
+  observer.observe(document.getElementById('columns'), config1);
+       
+</script>  
+  
