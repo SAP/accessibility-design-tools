@@ -18,10 +18,10 @@ The [Figma desktop app](https://www.figma.com/downloads/): Plugin development an
 
 For setup of dev environment, please read the Figma [Plugin QuickStart Guide](https://www.figma.com/plugin-docs/plugin-quickstart-guide/):
  
-- It is reccommended to [create a basic plugin structure from the scratch](https://www.figma.com/plugin-docs/plugin-quickstart-guide/#create-a-new-plugin) 
-- For dependencies, install Node and Npm from [Nodejs.org](https://nodejs.org/en/) website. When you download Node, your download also includes npm.
+- To test the general workflow, it is recommended to [create a basic example plugin project from the scratch](https://www.figma.com/plugin-docs/plugin-quickstart-guide/#create-a-new-plugin). 
+- For project dependencies, install then Node and Npm from [Nodejs.org](https://nodejs.org/en/) website. When you download Node, your download also includes npm.
 - Install [Typescript compiler tsc](https://code.visualstudio.com/docs/languages/typescript) for Visual Studio Code if not automatically installed by Node.js Setup Wizard.
-- In the Visual Studio Code terminal type "npm install" and press Enter. This will create the node_modules folder in your test project.
+- Go to the root folder of your project. In the Visual Studio Code terminal type "npm install" and press Enter. This will create the node_modules subfolder in your test project.
 
 As a final step, either replace the code in the basic plugin structure by file content of this project or install the project somewhere in the file system and execute a "npm install" in its root which will give you the node_modules folder as subfolder.
 
