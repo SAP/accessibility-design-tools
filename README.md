@@ -13,6 +13,18 @@ The plugin sources are located in the *ACCAssets* folder of this repository. The
 
 Please note that the required Figma *node _modules* subdirectory in the *ACCAssets* folder to run the plugins is NOT part of this distribution and should be created as part of the code setup according to Figma plugin development documentation.
 
+The [Figma desktop app](https://www.figma.com/downloads/): Plugin development and testing requires the Figma desktop app. Figma will need to read your plugin code saved as a local file. You can download Figma from the [Figma downloads page](https://www.figma.com/downloads/). If you already have the desktop app installed, make sure you’re running the latest version.
+[Visual Studio Code](https://code.visualstudio.com/): This is the development environment you’ll be using.
+
+For setup of dev environment, please read the Figma [Plugin QuickStart Guide](https://www.figma.com/plugin-docs/plugin-quickstart-guide/):
+ 
+- It is reccommended to [create a basic plugin structure from the scratch](https://www.figma.com/plugin-docs/plugin-quickstart-guide/#create-a-new-plugin) 
+- For dependencies, install Node and Npm from [Nodejs.org](https://nodejs.org/en/) website. When you download Node, your download also includes npm.
+- Install [Typescript compiler tsc](https://code.visualstudio.com/docs/languages/typescript) for Visual Studio Code if not automatically installed by Node.js Setup Wizard.
+- In the Visual Studio Code terminal type "npm install" and press Enter. This will create the node_modules folder in your test project.
+
+As a final step, either replace the code in the basic plugin structure by file content of this project or install the project somewhere in the file system and execute a "npm install" in its root which will give you the node_modules folder as subfolder.
+
 For more details, please contact the respective [Figma plugin development documentation](https://www.figma.com/plugin-docs/). 
 
 ## Support, Feedback, Contributing
