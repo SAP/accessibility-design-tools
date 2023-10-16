@@ -7,6 +7,10 @@ They are intended to annotate accessibility-relevant information in application 
 
 Documentation of the Accessibility Design Tools Figma library will be located in experience.sap.com.
 
+## Plugin useage
+
+Each of the plugins contain a quick reference (Info "i") how to use them on existing Figma stencils within Application UI Design.
+
 ## Requirements and Setup
 
 The plugin sources are located in the *ACCAssets* folder of this repository. They have to be installed in a typical project structure for Figma Plugin development with an IDE like VS Code. 
