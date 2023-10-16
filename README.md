@@ -5,7 +5,7 @@
 The Accessibility Design Tools Figma plugins offer a subset of annotations of the Accessibility Design Tools Figma library for Designers.
 They are intended to annotate accessibility-relevant information in application and control visual and interaction design before handover to development.
 
-[Documentation of the Accessibility Design Tools Figma library](https://experience.sap.com//wp-content/uploads/files/guidelines/Uploads/Accessibility/AccessibilityDesignToolsDocumentation.pdf) is located in experience.sap.com.
+Documentation of the Accessibility Design Tools Figma library will be located in experience.sap.com.
 
 ## Requirements and Setup
 
