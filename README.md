@@ -8,7 +8,7 @@ The related [Figma plugin](https://www.figma.com/community/plugin/10725635792933
 
 Please provide all feedback to this e-mail: [a11ydesigntools@sap.com](mailto:a11ydesigntools@sap.com).
 
-## Plugin useage
+## Plugin usage
 
 Each of the plugins contain a quick reference (Info "i") how to use them on existing Figma stencils within Application UI Design.
 
